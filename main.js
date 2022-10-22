@@ -2,8 +2,8 @@ import { VK } from "vk-io"
 import * as func from "./Functions/function.js"
 import { readFileSync, readdirSync, existsSync } from "fs"
 
-const Bot = new VK({ token: "vk1.a.po6jeDLgCZL_lRuPCG_7p1x8Kl-_CnfBkKzInyIsP99oKBMNjIiYSYAfi_5ZpZx-4SKUiyOTp55XC84bdUJzXAO3B9GEpI19MBMm82vCQb5IXtRNXtcEMX1dEujXUl_GchAySE-FJHmbdDeLar8aUmCYsag8wHxgHttXd5Mx6e2N8pKFQFQwgOzH0IFh6sO8" })
-const vk = new VK({ token: "vk1.a.po6jeDLgCZL_lRuPCG_7p1x8Kl-_CnfBkKzInyIsP99oKBMNjIiYSYAfi_5ZpZx-4SKUiyOTp55XC84bdUJzXAO3B9GEpI19MBMm82vCQb5IXtRNXtcEMX1dEujXUl_GchAySE-FJHmbdDeLar8aUmCYsag8wHxgHttXd5Mx6e2N8pKFQFQwgOzH0IFh6sO8" })
+const Bot = new VK({ token: "" })
+const vk = new VK({ token: "" })
 
 Bot.updates.start().then(async () => {
     for(const file of readdirSync("/root/CookieLP/database").filter(x => x.split('.').pop() == "json")){
