@@ -1,4 +1,5 @@
 import { VK, CallbackService, API } from "vk-io"
+import { isRegExp } from "util"
 import moment from "moment"
 import constants from "./constants.js"
 import { writeFileSync, readdirSync, readFileSync, existsSync } from "fs"
@@ -167,10 +168,6 @@ class VKMe extends API {
 			...constants.vk.master.defaultParams,
 		});
 	}
-}
-
-const isRegExp = async function(e){
-    return e instanceof RegExp;
 }
 
 const connect = async function(params={}){
