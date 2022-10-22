@@ -232,4 +232,4 @@ const user = class {
     }
 }
 
-export { connect, checkToken, save, VKMe, citata, isRegExp }
+export { connect, checkToken, save, VKMe, citata }

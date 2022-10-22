@@ -1,4 +1,5 @@
 import { VK } from "vk-io"
+import { isRegExp } from "util"
 import * as func from "./Functions/function.js"
 import { readFileSync, readdirSync, existsSync } from "fs"
 
@@ -29,7 +30,7 @@ Bot.updates.on("message", async (message, next) => {
                             break;
                         }
                     }
-                } else if (func.isRegExp(script.default.regexp)) {
+                } else if (isRegExp(script.default.regexp)) {
                     if (script.default.regexp.test(message.text)) {
                         message.args = message.text.match(script.default.regexp);
                         await script.default.run.call(Bot, message);
